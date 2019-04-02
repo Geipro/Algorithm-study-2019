@@ -10,12 +10,12 @@ float festival(vector<int> Cost, int n, int m) {
 	float compare = 100.0000000;									//비교값cout << std::setprecision(8);
 	vector<int> avg;
 
-	/*
 	for (int i = m; i <= n; i++) {																//더할 개수
 		for (int j = 0; j < (n - i + 1); j++) {													//어디부터 더할건지 벡터에 삽입. (ex 0번째 부터, 6개중 4번째부터)
+			int x = j;																			//아래 포문에서 j부터 넣어야하는데, 포문이 안에 있어서 j값이 추가되지 않으므로 내부에서 더할수 있도록 변수선언
 			for (int k = 0; k < i; k++) {														//0번째부터 3개만 넣는다면 0~2번까지 벡터에 넣음.    
-				avg.push_back(Cost.at(j));														
-				cout << Cost.at(j);
+				avg.push_back(Cost.at(x));
+				x++;																			
 			}
 			compare = accumulate(avg.begin(), avg.end(), 0.0000000) / avg.size();             
 			if (compare < cheapest_cost)					//비교
@@ -23,8 +23,6 @@ float festival(vector<int> Cost, int n, int m) {
 			avg.clear();
 		}
 	}
-	 현재 포문 오류
-	*/
 	return cheapest_cost;
 }
 
