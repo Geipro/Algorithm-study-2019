@@ -75,7 +75,6 @@ int main()
 		cout.precision(7);			// 출력 소수 자리 서정
 		cout << average << endl;
 
-
 		input_count--;
 	}
 	
