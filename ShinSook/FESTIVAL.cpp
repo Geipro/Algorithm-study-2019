@@ -30,11 +30,14 @@ int main() {
 	int C, n, m, cost;
 	float cheapest = 0;									//함수에서 받아올 결과값
 	cout << fixed;
-	cout << std::setprecision(11);						//나오는 숫자들에 부동소수점 설정(7자리 이하일 시, 7로하면 에러가 뜬다고 함.)cin >> C;
+	cout << std::setprecision(11);						//나오는 숫자들에 부동소수점 설정(7자리 이하일 시, 7로하면 에러가 뜬다고 함.)
+	
+	cin >> C;
+	
+	vector<int> Cost;								//대여 비용을 넣을 벡터
 
 	for (int i = 0; i < C; i++) {
 		cin >> n; cin >> m;
-		vector<int> Cost;								//대여 비용을 넣을 벡터
 
 		for (int j = 0; j < n; j++) {
 			cin >> cost;
