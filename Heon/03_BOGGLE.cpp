@@ -1,5 +1,6 @@
 ﻿#include "pch.h"
 #include <iostream>
+#include <cstring>
 #include <string>
 #include <vector>
 #include <queue>
